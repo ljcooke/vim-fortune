@@ -1,10 +1,8 @@
-"------------------------------------------------------------------------------
-" Vim syntax for fortune files
-"
+" Vim syntax file
+" Language: Fortune
+" Maintainer: Liam Cooke
+" URL: https://github.com/araile/vim-fortune
 " License: MIT
-"
-" https://github.com/araile/vim-fortune
-"------------------------------------------------------------------------------
 
 if exists("b:current_syntax")
   finish
