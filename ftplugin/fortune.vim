@@ -10,6 +10,7 @@ if (exists('b:did_ftplugin'))
 endif
 let b:did_ftplugin = 1
 
+setlocal nomodeline
 setlocal comments=
 setlocal tabstop=8 softtabstop=8 shiftwidth=8
 setlocal textwidth=72
