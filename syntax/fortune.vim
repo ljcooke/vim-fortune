@@ -6,6 +6,12 @@
 " https://github.com/araile/vim-fortune
 "------------------------------------------------------------------------------
 
+if exists("b:current_syntax")
+  finish
+endif
+
 syntax match fortuneSeparator /^%$/
 
 highlight link fortuneSeparator Keyword
+
+let b:current_syntax = "fortune"
