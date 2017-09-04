@@ -20,6 +20,9 @@ setlocal noexpandtab
 " Sections
 
 function! s:NextSection(forward)
+  let save = @/
+  mark '
+
   if a:forward
     let dir = '/'
   else
@@ -27,6 +30,9 @@ function! s:NextSection(forward)
   endif
 
   execute 'silent normal! ' . dir . '^%$' . "\r"
+
+  call histdel('search', -1)
+  let @/ = save
 endfunction
 
 noremap <script> <buffer> <silent> ]] :call <SID>NextSection(1)<cr>
