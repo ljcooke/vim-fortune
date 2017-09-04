@@ -14,3 +14,22 @@ setlocal comments=
 setlocal tabstop=8 softtabstop=8 shiftwidth=8
 setlocal textwidth=72
 setlocal noexpandtab
+
+
+" -----------------------------------------------------------------------------
+" Sections
+
+function! s:NextSection(forward)
+  if a:forward
+    let dir = '/'
+  else
+    let dir = '?'
+  endif
+
+  execute 'silent normal! ' . dir . '^%$' . "\r"
+endfunction
+
+noremap <script> <buffer> <silent> ]] :call <SID>NextSection(1)<cr>
+noremap <script> <buffer> <silent> ][ :call <SID>NextSection(1)<cr>
+noremap <script> <buffer> <silent> [[ :call <SID>NextSection(0)<cr>
+noremap <script> <buffer> <silent> [] :call <SID>NextSection(0)<cr>

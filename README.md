@@ -9,6 +9,8 @@ Features:
 
   - Highlights the `%` lines that separate fortunes.
 
+  - Move between fortune separators using the `[[` and `]]` commands.
+
   - Sets the text width to 72 and tab width to 8, to match the recommended
     formatting style for fortune files.
 
