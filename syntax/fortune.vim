@@ -12,6 +12,6 @@ endif
 
 syntax match fortuneSeparator /^%$/
 
-highlight link fortuneSeparator Keyword
+highlight link fortuneSeparator Delimiter
 
 let b:current_syntax = "fortune"
