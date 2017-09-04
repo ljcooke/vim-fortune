@@ -9,15 +9,15 @@ if exists("b:current_syntax")
 endif
 
 
-" Fortune separator
-syntax match fortuneSeparator /^%$/
-
 " Text overflowing the recommended width of 72 characters
 syntax match fortuneText /^\v.{0,72}/ nextgroup=fortuneOverflow
 syntax match fortuneOverflow /\v.+/ contained
 
+" Fortune separator
+syntax match fortuneSeparator /^%$/
 
-highlight link fortuneSeparator Delimiter
+
 highlight link fortuneOverflow Error
+highlight link fortuneSeparator Delimiter
 
 let b:current_syntax = "fortune"
