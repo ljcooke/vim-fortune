@@ -3,11 +3,14 @@ vim-fortune
 
 ## Features
 
-This plugin adds support for editing [fortune][fortune] files with Vim.
+This plugin adds support to Vim for editing [fortune][fortune] files.
 
 Features:
 
-  - Highlight the `%` lines that separate fortunes.
+  - Highlights the `%` lines that separate fortunes.
+
+  - Sets the text width to 72 and tab width to 8, to match the recommended
+    formatting style for fortune files.
 
 ## Install
 
