@@ -19,23 +19,34 @@ setlocal noexpandtab
 " -----------------------------------------------------------------------------
 " Sections
 
-function! s:NextSection(forward)
+function! s:NextSection(forward, count)
   let save = @/
   mark '
 
   if a:forward
-    let dir = '/'
+    let flags = ''
   else
-    let dir = '?'
+    let flags = 'b'
   endif
 
-  execute 'silent normal! ' . dir . '^%$' . "\r"
+  let i = 0
+  while i < a:count
+    let i = i + 1
+    let pos = search('^%$', 'W' . flags)
+
+    if pos == 0
+      if a:forward == 0
+        call cursor(1, 1)
+      endif
+      break
+    endif
+  endwhile
 
   call histdel('search', -1)
   let @/ = save
 endfunction
 
-noremap <script> <buffer> <silent> ]] :call <SID>NextSection(1)<cr>
-noremap <script> <buffer> <silent> ][ :call <SID>NextSection(1)<cr>
-noremap <script> <buffer> <silent> [[ :call <SID>NextSection(0)<cr>
-noremap <script> <buffer> <silent> [] :call <SID>NextSection(0)<cr>
+noremap <script> <buffer> <silent> ]] :<C-U>call <SID>NextSection(1, v:count1)<cr>
+noremap <script> <buffer> <silent> ][ :<C-U>call <SID>NextSection(1, v:count1)<cr>
+noremap <script> <buffer> <silent> [[ :<C-U>call <SID>NextSection(0, v:count1)<cr>
+noremap <script> <buffer> <silent> [] :<C-U>call <SID>NextSection(0, v:count1)<cr>
