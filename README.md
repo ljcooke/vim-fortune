@@ -20,7 +20,7 @@ This project follows the standard runtime path structure.
 
   - Install using Pathogen:
 
-        $ git clone https://github.com/araile/vim-fortune.git ~/.vim/bundle/vim-fortune
+        $ git clone https://git.sr.ht/~ljc/vim-fortune ~/.vim/bundle/vim-fortune
 
 ## Usage
 

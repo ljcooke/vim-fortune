@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: Fortune
 " Maintainer: Liam Cooke
-" URL: https://github.com/araile/vim-fortune
+" URL: https://git.sr.ht/~ljc/vim-fortune
 " License: MIT
 
 if exists("b:current_syntax")
