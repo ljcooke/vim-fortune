@@ -20,7 +20,8 @@ This project follows the standard runtime path structure.
 
   - Install using Pathogen:
 
-        $ git clone https://git.sr.ht/~ljc/vim-fortune ~/.vim/bundle/vim-fortune
+        $ git clone https://github.com/ljcooke/vim-fortune.git \
+            ~/.vim/bundle/vim-fortune
 
 ## Usage
 
@@ -33,6 +34,5 @@ This is done automatically if the filename ends with the extension `.fortune`.
 ## License
 
 Licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 
 [fortune]: https://en.wikipedia.org/wiki/Fortune_%28Unix%29
